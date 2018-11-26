@@ -12,10 +12,10 @@ namespace homework1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("App started!");
+            Console.WriteLine("App started!\n\n");
 
             StreamWriter input = new StreamWriter("C:/Users/luka/Desktop/input.txt");
-            input.WriteLine("Ovaj tekst je samo primjer za ulaz. Sadrži samo dvije rečenice.");
+            input.WriteLine("Ovaj tekst je samo primjer za ulaz. Sadrži samo dvije rečenice. Dodatak ovoj recenici u smislu novih rijeci sa samo nekoliko ili tocnije pet recenica dodatnih.");
             input.Flush();
             input.Close();
 
@@ -88,6 +88,7 @@ namespace homework1
             outputString += " )";
 
             Console.WriteLine(outputString);
+            Console.WriteLine("\n\nApp finished! Press any key to continue...");
             Console.ReadKey();
         }
     }
