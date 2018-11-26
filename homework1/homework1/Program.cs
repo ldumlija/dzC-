@@ -86,7 +86,7 @@ namespace homework1
             output.Flush();
             output.Close();
 
-            string outputString = "Broj obrisanih rijeci je " + deleteWordCounter + " (";
+            string outputString = "Number of deleted words is " + deleteWordCounter + " (";
 
             foreach (KeyValuePair<string, int> entry in deleteMap)
             {
