@@ -14,12 +14,10 @@ namespace homework1
         {
             Console.WriteLine("App started!\n\n");
 
-            StreamWriter input = new StreamWriter("C:/Users/luka/Desktop/input.txt");
+            /*StreamWriter input = new StreamWriter("C:/Users/luka/Desktop/input.txt");
             input.WriteLine("Ovaj tekst je samo primjer za ulaz. Sadrži samo dvije rečenice. Dodatak ovoj recenici u smislu novih rijeci sa samo nekoliko ili tocnije pet recenica dodatnih.");
             input.Flush();
-            input.Close();
-
-            StreamWriter output = new StreamWriter("C:/Users/luka/Desktop/output.txt");
+            input.Close();           
 
             StreamWriter keyWords = new StreamWriter("C:/Users/luka/Desktop/keywords.txt");
             keyWords.WriteLine("je");
@@ -28,6 +26,9 @@ namespace homework1
             keyWords.WriteLine("pet");
             keyWords.Flush();
             keyWords.Close();
+            */
+
+            StreamWriter output = new StreamWriter("C:/Users/luka/Desktop/output.txt");
 
             StreamReader inputRead = new StreamReader("C:/Users/luka/Desktop/input.txt");
             StreamReader keyWordsRead = new StreamReader("C:/Users/luka/Desktop/keywords.txt");
@@ -65,7 +66,14 @@ namespace homework1
             {
                 if (keyWordArray.IndexOf(inputLine) == -1)
                 {
-                    stringForInput += inputLine + " ";
+                    if (inputLine.Contains("."))
+                    {
+                        stringForInput += inputLine + "\n";
+                    }
+                    else
+                    {
+                        stringForInput += inputLine + " ";
+                    }
                 }
                 else
                 {
